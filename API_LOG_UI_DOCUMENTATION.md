@@ -2,9 +2,7 @@
 
 ## Executive Summary
 
-**Project Name:** Observability dashboard  
-**Developer:** [Your Name]  
-**Duration:** Internship Project  
+**Project Name:** Observability dashboard    
 **Technology Stack:** Python, FastAPI, Kubernetes, SQLite, Alertz API  
 **Purpose:** Automated observability gap analysis and log management for microservices
 
