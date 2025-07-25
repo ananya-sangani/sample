@@ -3,7 +3,7 @@
 **Technology Stack:** Python, FastAPI, Kubernetes, SQLite, Alertz API  
 **Purpose:** Automated observability gap analysis and log management for microservices
 
-Observability Dashboard is a comprehensive observability platform that automates the analysis of Kubernetes pod logs, identifies missing monitoring coverage, and generates detailed reports for DevOps teams. The system addresses critical gaps in microservice monitoring by providing automated log collection, intelligent API mapping, and comprehensive alert coverage analysis.
+A comprehensive observability platform that automates the analysis of Kubernetes pod logs, identifies missing monitoring coverage, and generates detailed reports for DevOps teams. The system addresses critical gaps in microservice monitoring by providing automated log collection, API mapping, metrics emission validation, and alert coverage analysis.
 
 ## Technical Architecture
 
