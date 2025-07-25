@@ -1,4 +1,4 @@
-# API Log UI - Comprehensive Project Documentation
+Observability Dashboard
 
 ## Executive Summary
 
