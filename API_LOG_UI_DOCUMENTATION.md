@@ -1,11 +1,11 @@
 # Observability Dashboard
 
 **Technology Stack:** Python, FastAPI, Kubernetes, SQLite, Alertz API  
-**Purpose:** Automated observability gap analysis and log management for microservices
+**Purpose:** Automated observability gap analysis for microservices
 
 ## Overview
 
-The Observability Dashboard automates the analysis of Kubernetes pod logs to identify monitoring gaps in microservice environments. It provides programmatic access to Kubernetes clusters for mapping codebase components to emitted metrics, enabling systematic identification of observability coverage issues.
+The Observability Dashboard automates the analysis of Kubernetes pod logs to identify monitoring gaps in microservice environments. It provides programmatic access to Kubernetes clusters for mapping API endpoints to emitted metrics, enabling systematic identification of observability coverage issues. The system integrates with Alertz API to analyze alert coverage on metrics and identify APIs without corresponding metrics or alert configurations.
 
 ## Core Functionality
 
@@ -23,8 +23,8 @@ The Observability Dashboard automates the analysis of Kubernetes pod logs to ide
 
 ### Alert Coverage Analysis
 - Integrate with Alertz API for alert discovery
-- Map alerts to API endpoints
-- Identify APIs without alert configurations
+- Analyze alert coverage on metrics
+- Identify APIs without corresponding metrics or alert configurations
 - Generate coverage reports with priority recommendations
 
 ### Automated Reporting
