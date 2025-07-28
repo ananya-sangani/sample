@@ -37,24 +37,6 @@ This observability solution enhances monitoring and alerting by identifying gaps
 
 ## 🏗️ Technical Architecture
 
-### System Overview
-
-```mermaid
-graph TB
-    A[Web Interface<br/>FastAPI] --> B[Log Collection<br/>Kubernetes]
-    B --> C[Alert System<br/>Alertz API]
-    A --> D[Data Analysis<br/>Parser]
-    B --> E[Log Storage<br/>SQLite]
-    C --> F[Report Generation<br/>Templates]
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-    style E fill:#fce4ec
-    style F fill:#f1f8e9
-```
-
 ### Core Components
 
 1. **Web Application (main.py)**
@@ -100,13 +82,6 @@ graph TB
 
 ## 📋 Prerequisites
 
-### System Requirements
-- **Operating System**: Linux, macOS, or Windows
-- **Python Version**: 3.8 or higher
-- **Memory**: Minimum 4GB RAM (8GB recommended)
-- **Storage**: 10GB free disk space
-- **Network**: Access to Kubernetes cluster and Alertz API
-
 ### Required Software
 1. **Python Environment**
    - Python 3.8+ installed
@@ -121,7 +96,7 @@ graph TB
 3. **Network Connectivity**
    - Access to Kubernetes API server
    - Access to Alertz API endpoints
-   - Access to JMX endpoints (optional)
+   - Access to JMX endpoints 
 
 ## 🚀 Installation & Setup
 
@@ -344,7 +319,6 @@ python intelligent_alert_mapper.py
    - Identify performance trends
    - Generate capacity planning insights
 
-### Advanced Features
 
 #### Dynamic Configuration
 The system automatically discovers teams and services from Alertz API:
@@ -534,36 +508,6 @@ top -p $(pgrep -f "python.*main.py")
 - **Database Scaling**: Consider migration to PostgreSQL for large datasets
 - **Resource Monitoring**: Track CPU, memory, and disk usage
 
-## 📁 Project Structure
-
-```
-observability-dashboard/
-├── main.py                           # Main web application
-├── parser.py                         # Log parsing engine
-├── config.py                         # Configuration management
-├── requirements.txt                  # Python dependencies
-├── .env                              # Environment variables (create this)
-├── templates/                        # Web interface templates
-│   ├── enhanced_form_fixed.html     # Main interface
-│   ├── enhanced_observability_report.html
-│   └── ...
-├── log-pooling-service/              # Log collection service
-│   ├── log_pooling_service.py       # Main service
-│   ├── start_pooling_service.py     # Service launcher
-│   ├── discover_pods.py             # Pod discovery
-│   └── manual_pod_config.py         # Pod configuration
-├── fetch_alerts_dump.py             # Alert collection
-├── fetch_alert_details.py           # Alert analysis
-├── automated_alert_pipeline.py      # Automated pipeline
-├── intelligent_alert_mapper.py      # Alert mapping
-├── dynamic_config_manager.py        # Dynamic configuration
-├── jmx_diagnostic.py                # JMX metrics
-├── run_hystrix_mapper.py            # Hystrix mapping
-├── logs_pool.db                     # Historical log database
-├── .team_cache.json                 # Cached team information
-├── .service_cache.json              # Cached service mappings
-└── *.json                           # Generated mappings and reports
-```
 
 ## 🔧 Configuration Management
 
@@ -606,37 +550,7 @@ teams = config_manager.discover_all_teams()
 service_mappings = config_manager.get_service_mappings()
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-For support and questions:
-- Create an issue in the repository
-- Check the troubleshooting section
-- Review the configuration documentation
-- Run `python test_dynamic_config.py` for configuration issues
-
-## 🔄 Roadmap
-
-- [ ] Real-time streaming analysis
-- [ ] Machine learning-based anomaly detection
-- [ ] Integration with additional monitoring tools
-- [ ] Advanced visualization dashboards
-- [ ] Automated remediation suggestions
-- [ ] Multi-cluster support
-- [ ] Custom metric definitions
-- [ ] Advanced alert correlation
 
 ---
 
-**Built with ❤️ for better observability in microservices**
+
